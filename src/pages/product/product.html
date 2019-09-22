@@ -1,0 +1,23 @@
+<!--
+  Generated template for the ProductPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Product</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="product-image" [style.backgroundImage]="'url(../assets/imgs/' + product.image + ')'">
+  </div>
+  <ion-list>
+      <ion-item><div item-start>Brand</div><div item-end>{{product.name}}</div></ion-item>
+      <ion-item><div item-start>Price</div><div item-end>{{product.price}} TND</div></ion-item>
+      <ion-item><div item-start>Size</div><div item-end>{{product.size}}</div></ion-item>
+      <ion-item><div item-start>Colors</div><div item-end><div style="display:flex"><div *ngFor="let color of product.colors" class="color" [style.backgroundColor]="color"></div></div></div></ion-item>
+  </ion-list>
+
+</ion-content>
